@@ -1,0 +1,249 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color:ghostwhite; 
+  
+}
+
+
+
+li {
+    display: inline;
+    list-style-type: none;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-main {   
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    height: auto;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+}
+.logo {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    font-size: 40px;
+    align-self:center ;
+    text-align: center;
+    color: white;
+}
+
+.home{
+    grid-column: 3/5;
+   text-align: end ;
+   align-self: center;
+   color: white;
+ 
+}
+
+.register{
+grid-column: 5/7;
+  align-self:center ;
+  text-align: center;
+  color: white;
+}
+
+.about{
+    grid-column: 7/8;
+    grid-row: 1/1;
+  align-self:center ;
+  text-align: start;
+}
+
+
+
+
+
+
+.about,
+.cart,
+.home,
+.register{
+color: white;
+font-family: sans-serif;
+font-size: auto;
+cursor: pointer;
+white-space: nowrap;
+}
+
+.main-body,
+.main-div-fail,
+.main-div-correct{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+   
+}
+
+#subject-fail,
+#subject-correct{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+    grid-column: 1/11;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: large;
+    text-align:center;
+    padding-top: 30px;
+}
+#failDiv,
+#correct-div{
+    grid-column: 4/8;
+    grid-row: 3/9;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    width: 400px;
+    height: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;    
+
+}
+#mesgFail,
+#mesgWelcome{
+    grid-column: 1/11;
+    grid-row: 4/8;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-size: x-large;
+    text-align:center;
+    padding-top: 30px;
+}
+
+#tryAgain,
+#sign-out{
+        cursor: pointer;
+        align-self:center;
+        justify-self:center;
+        width: 150px;
+        height: 50px;
+        grid-column: 3/9;
+        grid-row: 7/10;
+        color: white;
+        font-size: 14px;
+        border-radius: 5px;
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+
+
+.login-form{
+    grid-column: 4/8;
+    grid-row: 3/9;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    width: 400px;
+    height: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.login-form-name{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+    grid-column: 1/11;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: large;
+    text-align:center;
+    padding-top: 30px;
+}
+.input-username:focus,
+.input-password:focus{
+    background-color:lightgray;
+    outline: none;
+}
+.input-username{
+    grid-column: 3/9;
+    border-radius: 10px;
+    grid-row: 4/6;
+    width: 250px;
+    align-self: center;
+    justify-self: center;
+    padding : 10px;
+    color:black;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.input-password{
+    border-radius: 10px;
+    grid-column: 3/9;
+    grid-row: 6/6;
+    width: 250px;
+    align-self: center;
+    justify-self: start;
+    padding : 10px;
+    color:black;
+    font-size: 16px;
+    outline: none;
+    
+}
+.no-account-register{
+    grid-column: 3/9;
+    grid-row: 7/9;
+    align-self: center;
+    justify-self: center;
+}
+
+.login-button:hover{
+    transform: scale(1.3);
+}
+.login-button{
+    cursor: pointer;
+    align-self:center;
+    justify-self:center;
+    width: 150px;
+    height: 50px;
+    grid-column: 3/9;
+    grid-row: 9/10;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#tryAgain:hover,
+#sign-out:hover{
+    transform: scale(1.5);
+}
+  
+
+.footer{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );    padding: 0%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    font-size: 16px;
+}
