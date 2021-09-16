@@ -77,16 +77,14 @@ white-space: nowrap;
 }
 
 .main-body,
-.main-div-fail,
-.main-div-correct{
+.main-div{
     display: grid;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(10,1fr);
    
 }
 
-#subject-fail,
-#subject-correct{
+#subject{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
     grid-column: 1/11;
     grid-row: 1/2;
@@ -99,8 +97,8 @@ white-space: nowrap;
     text-align:center;
     padding-top: 30px;
 }
-#failDiv,
-#correct-div{
+
+#correct-fail{
     grid-column: 4/8;
     grid-row: 3/9;
     align-self: center;
@@ -113,8 +111,7 @@ white-space: nowrap;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;    
 
 }
-#mesgFail,
-#mesgWelcome{
+#mesg{
     grid-column: 1/11;
     grid-row: 4/8;
     width: 100%;
@@ -127,8 +124,7 @@ white-space: nowrap;
     padding-top: 30px;
 }
 
-#tryAgain,
-#sign-out{
+#sign-out-try-again{
         cursor: pointer;
         align-self:center;
         justify-self:center;
@@ -228,8 +224,7 @@ white-space: nowrap;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-#tryAgain:hover,
-#sign-out:hover{
+#sign-out-try-again:hover{
     transform: scale(1.5);
 }
   

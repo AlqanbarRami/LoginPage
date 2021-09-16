@@ -2,6 +2,24 @@
 const userName = "test";
 const userPassword = "1234";
 
+// create div , p , button 
+const subject = document.createElement('p')
+const mainDiv = document.createElement('div');
+const div= document.createElement('div');
+const mesg = document.createElement('p');
+const button = document.createElement('button');
+
+// className and Id
+mainDiv.className = "main-div";
+mainDiv.id = "main-div";
+subject.id = "subject";
+div.id = "correct-fail";
+mesg.id = "mesg";
+button.id = "sign-out-try-again";
+
+
+
+
 //this function works whenever someone clicking on login button .
 function checkUser() {
 
@@ -29,35 +47,21 @@ function checkUser() {
 
 // The correct div will apears if the username and password are correct
 function createCorrectDiv() {     
-
-    //crete 2 div one main and the other inside the main and other things that I need them 
-    const subjectCorrect = document.createElement('p')
-    const mainDivCorrect = document.createElement('div');
-    const divCorrect = document.createElement('div');
-    const mesgWelcome = document.createElement('p');
-    const button = document.createElement('button');
-
-    // I gave them class name and Id cuz of CSS and Grid and I write some welcome message, subject and buttons name
-    mainDivCorrect.className = "main-div-correct";
-    mainDivCorrect.id = "main-div-correct";
-    mesgWelcome.innerHTML = "Welcome!";
-    subjectCorrect.id = "subject-correct";
-    subjectCorrect.innerHTML = `Welcome ${userName.toUpperCase()}!`;
-    divCorrect.id = "correct-div";
-    mesgWelcome.id = "mesgWelcome";
-    button.id = "sign-out";
+    // messages and button name 
+    mesg.innerHTML = "Welcome!";
+    subject.innerHTML = `Welcome ${userName.toUpperCase()}!`;
     button.innerText = "Sign Out";
 
     //Append 
-    divCorrect.append(mesgWelcome, subjectCorrect, mesgWelcome, button);
-    mainDivCorrect.append(divCorrect);
-    document.body.appendChild(mainDivCorrect);
+    div.append(mesg, subject, mesg, button);
+    mainDiv.append(div);
+    document.body.appendChild(mainDiv);
 
     //Sign out function will remove the current div, clearing the localstorage and make the display for login form visible again
-    document.getElementById("sign-out").onclick = function signOut() {
+    button.onclick = function signOut() {
      localStorage.clear();
         document.getElementById("login-form").style.display = "";
-        mainDivCorrect.remove();
+        mainDiv.remove();
         
     }
 }
@@ -66,35 +70,21 @@ function createCorrectDiv() {
 
 // if the user or password is incorrect this div will apears
     function createFailDiv() {
-    // create the the div and elements
-    const subject = document.createElement('p')
-    const mainDiv = document.createElement('div');
-    const div = document.createElement('div');
-    const button = document.createElement('button');
-    const mesgFail = document.createElement('p');
-
-    //class and Id name and other messages
-    mainDiv.className = "main-div-fail";
-    mainDiv.id = "main-div-fail"
-    mesgFail.innerHTML = "Username or password is incorrect";
-    subject.id = "subject-fail";
+    mesg.innerHTML = "Username or password is incorrect";
     subject.innerHTML = "Something Wrong";
-    div.id = "failDiv";
-    mesgFail.id = "mesgFail";
-    button.id = "tryAgain";
     button.innerText = "Try Again";
 
    //append
-    div.append(subject,mesgFail,button);
+    div.append(subject,mesg,button);
     mainDiv.append(div)
     document.body.appendChild(mainDiv);
 
     //retry button will remove the div and make display to the login form 
-    button.addEventListener('click', (event) => {
+    button.onclick = function tryAgain() {
         mainDiv.remove();
         document.getElementById("login-form").style.display = "";
 
-    });
+    }
     
 }
 
