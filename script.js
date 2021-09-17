@@ -20,17 +20,17 @@ button.id = "sign-out-try-again";
 
 
 
-//this function works whenever someone clicking on login button .
+//this function works whenever someone clicks on the login button .
 function checkUser() {
 
-    //hiding the firt form (input and output)
+    //hiding the first form (input and output)
     document.getElementById("login-form").style.display ="none"; 
 
     //create 2 variables (user and password) and those taking inputs values
     const user = document.getElementById("user").value;
     const pass = document.getElementById("pass").value;
 
-    // make a condtion to check if the user and pass equal to ( test, 1234)
+    // make a condtion to check if the user and pass are equal to ( test, 1234)
     //if Yes
     if (user == userName && pass == userPassword) { 
         //Saving them in localstorage and go to another Div (The welcome div)
@@ -38,7 +38,7 @@ function checkUser() {
         localStorage.setItem("userName", `${userName}`);
         createCorrectDiv();
     }
-    //if no go to the wrong user name or password (Fail div)
+    //if no go to the wrong username or password (Fail div)
     else {
         createFailDiv();
     }
@@ -68,7 +68,7 @@ function createCorrectDiv() {
 
 
 
-// if the user or password is incorrect this div will apears
+// if the user or password is incorrect this div will apear
     function createFailDiv() {
     mesg.innerHTML = "Username or password is incorrect";
     subject.innerHTML = "Something Wrong";
@@ -79,7 +79,7 @@ function createCorrectDiv() {
     mainDiv.append(div)
     document.body.appendChild(mainDiv);
 
-    //retry button will remove the div and make display to the login form 
+    //retry button will remove the div and make display to the login form visible again
     button.onclick = function tryAgain() {
         mainDiv.remove();
         document.getElementById("login-form").style.display = "";
@@ -90,8 +90,8 @@ function createCorrectDiv() {
 
 
 /*
- this function will always works wheneve you reload the page, if the name and password still inside the local storage 
- so we are moving to welcome div and no needs to login again 
+ this function will always work whenever you reload the page, if the name and password are still inside the localstorage 
+ moving to welcome div and no need to login again 
  */
 function stayLogged(){
     //if yes make the login form hidden (none) , and go to Welcome Div
@@ -100,7 +100,7 @@ function stayLogged(){
         createCorrectDiv();
     }
     else{
-        //if no make the login for display 
+        //if no make the login form display visible
         document.getElementById("login-form").style.display =""; 
     }
 }
